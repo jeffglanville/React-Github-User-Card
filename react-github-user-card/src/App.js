@@ -2,13 +2,25 @@ import React from 'react';
 import './App.scss';
 import Usercard from './components/Usercard';
 
-function App() {
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      followers: []
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ followers: this.state.followers });
+  }
+
+  render(){
   return (
     <div className="App">
-      <h1>user cards</h1>
-      <Usercard />
+      <Usercard followers={this.state.followers}/>
     </div>
   );
+  }
 }
 
 export default App;
