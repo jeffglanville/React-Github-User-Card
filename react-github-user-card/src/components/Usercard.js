@@ -8,25 +8,18 @@ class Usercard extends Component {
         };
     }
 
-    componentDidMount() {
-        fetch("https://api.github.com/users/jeffglanville")
-        .then(res => this.setState({ followers: this.followers }))
-        .catch(err => console.log(err));
-    }
-
     fetchFollowers = e => {
         e.preventDefault();
 
-        fetch(`https://api.github.com/users/jeffglanville/${this.state.followers}`)
-        .then(followers => this.setState({ followers: this.followers }))
+        fetch(`https://api.github.com/users/jeffglanville/followers`)
+        .then(res => this.setState({ res: this.followers.name  }))
         .catch(err => console.log(err));
     }
-
 
     render() {
         return (
             <div>
-
+                <h2>Followers</h2>
             </div>
         )
     }
