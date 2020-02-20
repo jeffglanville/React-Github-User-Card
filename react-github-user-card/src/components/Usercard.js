@@ -1,30 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Usercard extends Component {
-    constructor(){
-        super();
-        this.state={
-            followers: [],
-        };
-    }
+const Usercard = props => {
+    // fetch("https://api.github.com/users/jeffglanville/followers")
+    // .then(res => res.json)
+    // .then(followers => this.ListeningStateChangedEvent({ followers }))
+    // .catch(err => console.log(err));
 
-    fetchFollowers = e => {
-        e.preventDefault();
 
-        fetch(`https://api.github.com/users/jeffglanville/followers`)
-        .then(res => this.setState({ res: this.followers.name  }))
-        .catch(err => console.log(err));
-    }
-
-    render() {
-        return (
-            <div>
-                <h2>Followers</h2>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <h2>github followers</h2>
+            {props.followers.map(follower => (
+                <div key={follower.id} follower={props.follower}></div>
+            ))}
+        </div>
+    )
 }
-
 
 
 export default Usercard;

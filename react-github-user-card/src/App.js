@@ -11,8 +11,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ followers: this.state.followers });
+    fetch("https://api.github.com/users/jeffglanville/followers")
+    .then(res => res.json)
+    .then(followers => this.setState({ followers: followers.id }))
+    .catch(err => console.log(err));
   }
+
 
   render(){
   return (
