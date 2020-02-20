@@ -11,17 +11,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://api.github.com/users/jeffglanville/followers")
-    .then(res => res.json)
-    .then(followers => this.setState({ followers: followers.id }))
-    .catch(err => console.log(err));
-  }
-
+      fetch("https://api.github.com/users/jeffglanville/followers")
+      .then(res => res.json)
+      .then(followers => this.setState({ followers: followers.id }))
+      .catch(err => console.log(err));
+    }
 
   render(){
   return (
     <div className="App">
-      <Usercard followers={this.state.followers}/>
+      <Usercard followers={this.state.followers.id}/>
     </div>
   );
   }
