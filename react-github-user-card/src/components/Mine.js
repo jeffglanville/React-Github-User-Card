@@ -6,9 +6,8 @@ const Mine = props => {
 
     return (
         <div>
-            <h2>GitHub Name: {props.mine.login}</h2>
-            <p>Followers: {props.mine.followers}</p>
-            <p>BIO: {props.mine.bio}</p>
+            <h2>My GitHub Name: {props.mine.login}</h2>
+            <p>My Number of Followers: {props.mine.followers}</p>
         </div>
     )
 }

@@ -16,17 +16,24 @@ class App extends React.Component {
 
 
   componentDidMount() {
+    return(
+    axios
+    .get("https://api.github.com/users/jeffglanville")
+    .then(res => this.setState({mine: res.data})||console.log(res.data))
+    .catch(err => console.log(err)),
+
+    axios
+    .get("https://api.github.com/users/jeffglanville/followers")
+    .then(res => this.setState({followers: res.data}))
+    .catch(err => console.log(err))
+    )}
+
+
+  fetchMyData = e => {
     axios
     .get("https://api.github.com/users/jeffglanville/followers")
     .then(res => this.setState(res.data))
     .catch(err => console.log(err));
-  }
-
-  fetchFollowers = e => {
-    axios
-    .get("https://api.github.com/users/jeffglanville/followers")
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
   }
 
   render(){
@@ -40,3 +47,6 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+
