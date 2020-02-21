@@ -1,0 +1,15 @@
+.follower-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+        .followers{
+            width: 100%;
+            margin: 20%;
+            padding: 2%;
+            border: 2px solid darkgreen;
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+}

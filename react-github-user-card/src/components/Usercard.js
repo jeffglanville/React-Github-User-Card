@@ -1,21 +1,18 @@
 import React from 'react'
+import "../components/Usercard.scss";
 
 const Usercard =  props => {
 console.log(props)
     return (
-        <div>
+        <div className="follower-wrapper">
             <h2>Github Followers:</h2>
-            {/* if (props.followers.length === 0) {
-
-            } */}
             {props.followers.map(follower => {
                 return(
                     <div key={follower.id} className="followers">
-                        <img src={follower.avatar_url} alt={follower.login}/>
-                        <p>{follower.login}</p>
-                        <p>{follower.id}</p>
-                        <p>{follower.url}</p>
-                        <p href = "html_url"/>
+                        <img width="250" src={follower.avatar_url} alt={follower.login}/>
+                        <p>Login: {follower.login}</p>
+                        <p>Id: {follower.id}</p>
+                        <p>GitHub URL: {follower.url}</p>
                     </div>
                 )
             })}

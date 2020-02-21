@@ -28,14 +28,6 @@ class App extends React.Component {
     .catch(err => console.log(err))
     )}
 
-
-  fetchMyData = e => {
-    axios
-    .get("https://api.github.com/users/jeffglanville/followers")
-    .then(res => this.setState(res.data))
-    .catch(err => console.log(err));
-  }
-
   render(){
   return (
     <div className="App">
