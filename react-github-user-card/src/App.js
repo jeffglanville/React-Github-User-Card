@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-    .get("https://api.github.com/users/jeffglanville")
+    .get("https://api.github.com/users/jeffglanville/followers")
     .then(res => this.setState(res.data))
     .catch(err => console.log(err));
   }
