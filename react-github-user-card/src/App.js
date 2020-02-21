@@ -17,18 +17,23 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-    .get("https://api.github.com/users/jeffglanville/followers")
+    .get("https://api.github.com/users/jeffglanville")
     .then(res => this.setState(res.data))
     .catch(err => console.log(err));
+  }
+
+  fetchFollowers = e => {
+    axios
+    .get("https://api.github.com/users/jeffglanville/followers")
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
   }
 
   render(){
   return (
     <div className="App">
       <Mine mine={this.state.mine}/>
-      <Usercard followers={this.state.followers}
-        key={this.state.followers}
-      />
+      <Usercard followers={this.state.followers} key={this.state.followers} />
     </div>
   );
   }
