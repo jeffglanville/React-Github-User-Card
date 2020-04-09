@@ -12,6 +12,7 @@ console.log(props)
                         <img width="250" src={follower.avatar_url} alt={follower.login}/>
                         <p>Login: {follower.login}</p>
                         <p>Id: {follower.id}</p>
+                        <p>Avatar URL: {follower.avatar_url}</p>
                         <p>GitHub URL: {follower.url}</p>
                     </div>
                 )
