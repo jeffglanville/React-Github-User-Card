@@ -2,7 +2,9 @@ import React from 'react';
 import './App.scss';
 import Usercard from './components/Usercard';
 import Mine from './components/Mine';
+import SearchForm from './components/SearchForm';
 import axios from 'axios';
+
 
 class App extends React.Component {
   constructor(){
@@ -31,6 +33,7 @@ class App extends React.Component {
   render(){
   return (
     <div className="App">
+      <SearchForm />
       <Mine mine={this.state.mine}/>
       <Usercard followers={this.state.followers} key={this.state.followers} />
     </div>
