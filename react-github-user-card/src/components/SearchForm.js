@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react';
 
 
 function SearchForm() {
-    const [followers, setFollowers] = useState({ loginId: "" });
+    const [followers, setFollowers] = useState({});
 
     const handleChanges = e => {
         e.preventDefault();
@@ -15,7 +15,7 @@ function SearchForm() {
     return (
         <div>
             <form>
-                <label>Login: </label>
+                <label>Follower Login ID: </label>
                 <input
                     type="text"
                     name="login"
