@@ -1,32 +1,28 @@
-import React, {useState} from 'react';
+// import React from 'react'
+
+// const follower =
+
+// const handleChange = e => {
+//     this.state = {
+//         ...follower,
+//         [ e.target.name ]: [e.target.value]
+//     }
+// }
+
+// const SearchForm = () => {
+//     return (
+//         <div>
+//             <form>
+//                 <input
+//                     type="text"
+//                     name="follower"
+//                     placeholder="Search for ..."
+//                     onChange={handleChange}
+//                 />
+//             </form>
+//         </div>
+//     )
+// }
 
 
-function SearchForm() {
-    const [followers, setFollowers] = useState({});
-
-    const handleChanges = e => {
-        e.preventDefault();
-        setFollowers({
-            ...followers,
-            [e.target.loginId]: e.target.value
-        })
-    }
-
-    return (
-        <div>
-            <form>
-                <label>Follower Login ID: </label>
-                <input
-                    type="text"
-                    name="login"
-                    onChange={handleChanges}
-                />
-                <button>Search</button>
-            </form>
-        </div>
-    )
-
-}
-
-
-export default SearchForm;
+// export default SearchForm;

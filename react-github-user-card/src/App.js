@@ -2,8 +2,9 @@ import React from 'react';
 import './App.scss';
 import Usercard from './components/Usercard';
 import Mine from './components/Mine';
-import SearchForm from './components/SearchForm';
 import axios from 'axios';
+// import SearchForm from './components/SearchForm';
+import GitHubCalendar from 'react-github-calendar';
 
 
 class App extends React.Component {
@@ -14,7 +15,6 @@ class App extends React.Component {
       followers: []
     }
   }
-
 
 
   componentDidMount() {
@@ -33,11 +33,20 @@ class App extends React.Component {
   render(){
   return (
     <div className="App">
-      <SearchForm />
+      {/* <SearchForm /> */}
       <Mine mine={this.state.mine}/>
       <Usercard followers={this.state.followers} key={this.state.followers} />
+      <div>
+        <h1>My Git Hub Contribution Calendar</h1>
+        <GitHubCalendar
+          username="jeffglanville"
+          fontsize={14}
+          blockSize={12}
+          blockMargin={4}
+        />
+      </div>
     </div>
-  );
+    );
   }
 }
 
