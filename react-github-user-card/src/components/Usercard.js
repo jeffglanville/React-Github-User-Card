@@ -5,7 +5,6 @@ const Usercard =  props => {
 console.log(props)
     return (
         <div className="follower-wrapper">
-            <h2>Github Followers:</h2>
             {props.followers.map(follower => {
                 return(
                     <div key={follower.id} className="followers">

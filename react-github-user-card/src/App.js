@@ -32,20 +32,22 @@ class App extends React.Component {
 
   render(){
   return (
+    <>
     <div className="App">
-      {/* <SearchForm /> */}
-      <Mine mine={this.state.mine}/>
-      <Usercard followers={this.state.followers} key={this.state.followers} />
-      <div>
+    <div>
         <h1>My Git Hub Contribution Calendar</h1>
         <GitHubCalendar
           username="jeffglanville"
           fontsize={14}
-          blockSize={12}
-          blockMargin={4}
+          blockSize={14}
+          blockMargin={6}
         />
-      </div>
     </div>
+      {/* <SearchForm /> */}
+      <Mine mine={this.state.mine}/>
+      <Usercard followers={this.state.followers} key={this.state.followers} />
+    </div>
+    </>
     );
   }
 }
