@@ -1,5 +1,4 @@
 .follower-wrapper {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -9,5 +8,9 @@
         margin: 5px;
         padding: 5px;
         background-color: lightskyblue;
+    }
+
+    p {
+        width: 90%;
     }
 }
