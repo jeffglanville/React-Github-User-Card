@@ -1,0 +1,16 @@
+.follower-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .followers {
+        border: 2px dotted darkblue;
+        margin: 5px;
+        padding: 5px;
+        background-color: lightskyblue;
+    }
+
+    p {
+        width: 90%;
+    }
+}
